@@ -1,0 +1,22 @@
+services:
+    app:
+        image: app
+        container_name: app
+        build:
+            context: ../
+            dockerfile: ./deploy/build/Dockerfile
+        # use nginx
+        #    ports:
+        #      - 80:80
+        environment:
+            APP_CONF: ./config/test.yaml
+        volumes:
+            - /tmp/xxx:/app/logs
+        networks:
+            - default
+        restart: always
+#
+networks:
+    default:
+        name: global
+        external: true

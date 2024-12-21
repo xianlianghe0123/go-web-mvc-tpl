@@ -1,0 +1,8 @@
+storage/logs
+.idea
+*.log
+deploy/bin/docker-compose/conf
+deploy/bin/docker-compose/data
+**/bin/
+test/coverage.html
+test/coverage.out
